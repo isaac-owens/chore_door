@@ -13,7 +13,7 @@ let openDoor3;
 
 let numClosedDoors = 3;
 const startButton = document.getElementById('start');
-let currentlyPlaying = false;
+let currentlyPlaying = true;
 
 const isBot = door => {
   door.src === botDoorPath ? true : false;
@@ -82,6 +82,7 @@ gameOver = status => {
   } else {
     startButton.innerHTML = "Game Over! Play again?";
   }
+  currentlyPlaying = false;
 }
 
 randomChoreDoorGenerator();
