@@ -16,7 +16,11 @@ let numClosedDoors = 3;
 let currentlyPlaying = false;
 
 const isBot = door => {
-  door.src === botDoorPath ? true : false;
+  if (door.src === botDoorPath) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 const playDoor = door => {
